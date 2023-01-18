@@ -7,6 +7,7 @@ public class EmployeeWageComputation {
         E.Salary();
         E.AddPart();
         E.Switch();
+        E.Monthsalary();
 
     }
     //Check Employee is Present or Absent
@@ -14,15 +15,11 @@ public class EmployeeWageComputation {
     int P = 1;
     int randomCheck = (int) (Math.random() * 2);
 
-    void Attendance()
-    {
+    void Attendance() {
 
-        if (P == randomCheck)
-        {
+        if (P == randomCheck) {
             System.out.println("Employee is present");
-        }
-        else
-        {
+        } else {
             System.out.println("Employee is absent");
         }
     }
@@ -30,37 +27,31 @@ public class EmployeeWageComputation {
     //Calculate Daily Employee Wage
     int empRatePerHrs = 20;
     int empHr = 8;
-    void Salary()
-    {
-        if (P == randomCheck)
-        {
+
+    void Salary() {
+        if (P == randomCheck) {
 
             int salary = (empRatePerHrs * empHr);
             System.out.println("Salary:-" + salary);
-        }
-        else
-        {
+        } else {
             System.out.println("salary=0");
         }
 
 
     }
+
     //Add part time wage
     int Full = 2;
     int PartTime = 1;
     int Check = (int) (Math.random() * 3);
 
-    void AddPart()
-    {
+    void AddPart() {
 
-        if (Full == Check)
-        {
+        if (Full == Check) {
             int empHr = 8;
             int salary = (empRatePerHrs * empHr);
             System.out.println("Salary:-" + salary);
-        }
-        else if (PartTime == Check)
-        {
+        } else if (PartTime == Check) {
             int empHr = 4;
             int salary = (empRatePerHrs * empHr);
             System.out.println("Salary:-" + salary);
@@ -69,17 +60,30 @@ public class EmployeeWageComputation {
     }
     //using case statement
 
-      void Switch() {
-          switch (Check) {
-              case 2:
-                  int empHrs = 8;
-                  System.out.println("Salary is:-"+empRatePerHrs * empHrs);
-                  break;
-              case 1:
-                  empHrs = 4;
-                  System.out.println("Salary is:-"+empRatePerHrs * empHrs);
-                  break;
-          }
+    void Switch() {
+        switch (Check) {
+            case 2:
+                int empHrs = 8;
+                System.out.println("Salary is:-" + empRatePerHrs * empHrs);
+                break;
+            case 1:
+                empHrs = 4;
+                System.out.println("Salary is:-" + empRatePerHrs * empHrs);
+                break;
+        }
 
-      }
+    }
+    //Calculating Wages for a Month
+
+    int a = 20;               //Total working days
+    int Totsal = 0;
+    int sal = 0;
+
+    void Monthsalary() {
+        for (int day = 1; day <= a; day++) {
+            sal = sal + (empRatePerHrs * empHr);
+        }
+        System.out.println("salary of month:-"+sal);
+
+    }
 }
