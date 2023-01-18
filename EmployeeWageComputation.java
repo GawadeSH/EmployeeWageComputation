@@ -6,6 +6,7 @@ public class EmployeeWageComputation {
         E.Attendance();
         E.Salary();
         E.AddPart();
+        E.Switch();
 
     }
     //Check Employee is Present or Absent
@@ -47,11 +48,11 @@ public class EmployeeWageComputation {
     //Add part time wage
     int Full = 2;
     int PartTime = 1;
-
+    int Check = (int) (Math.random() * 3);
 
     void AddPart()
     {
-        int Check = (int) (Math.random() * 3);
+
         if (Full == Check)
         {
             int empHr = 8;
@@ -66,6 +67,19 @@ public class EmployeeWageComputation {
         }
 
     }
+    //using case statement
 
+      void Switch() {
+          switch (Check) {
+              case 2:
+                  int empHrs = 8;
+                  System.out.println("Salary is:-"+empRatePerHrs * empHrs);
+                  break;
+              case 1:
+                  empHrs = 4;
+                  System.out.println("Salary is:-"+empRatePerHrs * empHrs);
+                  break;
+          }
 
+      }
 }
