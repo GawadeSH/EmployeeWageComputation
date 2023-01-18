@@ -5,7 +5,7 @@ public class EmployeeWageComputation {
 
         E.Attendance();
         E.Salary();
-
+        E.AddPart();
 
     }
     //Check Employee is Present or Absent
@@ -13,11 +13,15 @@ public class EmployeeWageComputation {
     int P = 1;
     int randomCheck = (int) (Math.random() * 2);
 
-    void Attendance() {
+    void Attendance()
+    {
 
-        if (P == randomCheck) {
+        if (P == randomCheck)
+        {
             System.out.println("Employee is present");
-        } else {
+        }
+        else
+        {
             System.out.println("Employee is absent");
         }
     }
@@ -25,15 +29,41 @@ public class EmployeeWageComputation {
     //Calculate Daily Employee Wage
     int empRatePerHrs = 20;
     int empHr = 8;
-    void Salary() {
-        if (P == randomCheck) {
+    void Salary()
+    {
+        if (P == randomCheck)
+        {
 
             int salary = (empRatePerHrs * empHr);
             System.out.println("Salary:-" + salary);
-        } else {
+        }
+        else
+        {
             System.out.println("salary=0");
         }
 
+
+    }
+    //Add part time wage
+    int Full = 2;
+    int PartTime = 1;
+
+
+    void AddPart()
+    {
+        int Check = (int) (Math.random() * 3);
+        if (Full == Check)
+        {
+            int empHr = 8;
+            int salary = (empRatePerHrs * empHr);
+            System.out.println("Salary:-" + salary);
+        }
+        else if (PartTime == Check)
+        {
+            int empHr = 4;
+            int salary = (empRatePerHrs * empHr);
+            System.out.println("Salary:-" + salary);
+        }
 
     }
 
